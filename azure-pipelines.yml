@@ -1,8 +1,3 @@
-
-steps:
-- script: Visual Studio build!
-  displayName: 'Visual Studio build'
-
 # Visual Studio build
 # Build with MSBuild and set the Visual Studio version property
 - task: VSBuild@1
