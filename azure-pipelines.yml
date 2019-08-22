@@ -1,36 +1,12 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'vs2017-win2016' # other options: 'macOS-10.13', 'vs2017-win2016'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
-# Visual Studio build
-# Build with MSBuild and set the Visual Studio version property
-- task: VSBuild@1
+- task: UsePythonVersion@0
   inputs:
-    #solution: '**\*.sln' 
-    vsVersion: 'latest' # Optional. Options: latest, 16.0, 15.0, 14.0, 12.0, 11.0
-    #msbuildArgs: # Optional
-    #platform: # Optional
-    #configuration: # Optional
-    #clean: false # Optional
-    #maximumCpuCount: false # Optional
-    #restoreNugetPackages: false # Optional
-    #msbuildArchitecture: 'x86' # Optional. Options: x86, x64
-    #logProjectEvents: true # Optional
-    #createLogFile: false # Optional
-    #logFileVerbosity: 'normal' # Optional. Options: quiet, minimal, normal, detailed, diagnostic
+    versionSpec: '3.6'
