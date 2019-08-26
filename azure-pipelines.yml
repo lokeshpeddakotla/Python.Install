@@ -1,3 +1,4 @@
+
 trigger:
 - master
 
@@ -7,5 +8,9 @@ jobs:
   pool:
     vmImage: 'vs2017-win2016' # other options: 'macOS-10.13', 'vs2017-win2016'
 
-Steps:
- -task: UsePythonVersion@0
+steps:
+  -task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.6' 
+    addToPath: true 
+    #architecture: 'x64' # Options: x86, x64 (this argument applies only on Windows agents)
