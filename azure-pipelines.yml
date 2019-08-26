@@ -5,6 +5,8 @@ trigger:
 jobs:
 - job: Build1
   displayName: Build BIOS Core
+  
+  #Image which has Visual Studio 2017 installed on Windows Server 2016.
   pool:
     vmImage: 'vs2017-win2016' # other options: 'macOS-10.13', 'vs2017-win2016'
 
