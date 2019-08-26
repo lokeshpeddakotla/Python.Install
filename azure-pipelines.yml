@@ -11,8 +11,8 @@ jobs:
 
   # Use Python version
   # Use the specified version of Python from the tool cache, optionally adding it to the PATH
-  steps:
-  -task: UsePythonVersion@0
+steps:
+-task: UsePythonVersion@0
   inputs:
     versionSpec: '3.6' 
     addToPath: true 
