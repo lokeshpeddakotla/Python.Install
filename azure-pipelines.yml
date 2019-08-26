@@ -15,13 +15,8 @@ jobs:
       addToPath: true
       architecture: 'x64'
 
-  - script: python -m pip install --upgrade pip
-    displayName: 'Install/Upgrade pip'
-
-# Visual Studio build
-# Build with MSBuild and set the Visual Studio version property
-- task: VSBuild@1
-  inputs:
-    solution: '**\*.sln'
-    platform: 'x'
-    createLogFile: true
+  - script: |
+        python3 --version
+        pip3 install --upgrade pip
+        pip3 install --upgrade setuptools
+        pip3 install mu_environment
