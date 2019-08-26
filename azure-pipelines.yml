@@ -9,10 +9,10 @@ jobs:
     pool:
       vmImage: 'vs2017-win2016' # other options: 'macOS-10.13', 'vs2017-win2016'
 
-steps:
-# Use Python version
-# Use the specified version of Python from the tool cache, optionally adding it to the PATH
-- task: UsePythonVersion@0
+    steps:
+    # Use Python version
+    # Use the specified version of Python from the tool cache, optionally adding it to the PATH
+  -task: UsePythonVersion@0
   inputs:
     versionSpec: '3.6' 
     addToPath: true 
