@@ -6,3 +6,6 @@ jobs:
   displayName: Build BIOS Core
   pool:
     vmImage: 'vs2017-win2016' # other options: 'macOS-10.13', 'vs2017-win2016'
+
+Steps:
+ -task: UsePythonVersion@0
