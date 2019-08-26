@@ -12,5 +12,10 @@ steps:
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.6' 
-    #addToPath: true 
+    addToPath: true 
     #architecture: 'x64' # Options: x86, x64 (this argument applies only on Windows agents)
+
+- script: |
+        python3 --version
+        pip3 install --upgrade pip
+        pip3 install --upgrade setuptools
