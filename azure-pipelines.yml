@@ -9,16 +9,11 @@ jobs:
   pool:
     vmImage: 'vs2017-win2016' # other options: 'macOS-10.13', 'vs2017-win2016'
 
-    steps:
   # Use Python version
   # Use the specified version of Python from the tool cache, optionally adding it to the PATH
+  steps:
   -task: UsePythonVersion@0
   inputs:
     versionSpec: '3.6' 
     addToPath: true 
     #architecture: 'x64' # Options: x86, x64 (this argument applies only on Windows agents)
-
-- script: |
-        python3 --version
-        pip3 install --upgrade pip
-        pip3 install --upgrade setuptools
